@@ -18,10 +18,11 @@ If you want to test the contract with the latest version of NEAR Protocol, you c
 1. Clone nearcore from `debug/wasm-logs` branch: https://github.com/near/nearcore/compare/debug/wasm-logs
 2. `make neard-debug`
 3. Set the `NEAR_SANDBOX_BIN_PATH` env variable to a full path pointing to the `neard` in `./target/debug` folder
+4. Set the `NEAR_ENABLE_SANDBOX_LOG=1`
 4. and run `cargo test`
 
 Example one-liner:
 
 ```shell
-env NEAR_SANDBOX_BIN_PATH=/home/frol/nearcore/target/debug/neard cargo test
+env NEAR_SANDBOX_BIN_PATH=/home/frol/nearcore/target/debug/neard NEAR_ENABLE_SANDBOX_LOG=1 cargo test
 ```
